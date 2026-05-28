@@ -24,7 +24,7 @@ st.set_page_config(
 # =========================
 @st.cache_data
 def load_data():
-    df = pd.read_csv('../data/reviews_preprocessed.csv')
+    df = pd.read_csv('data/reviews_preprocessed.csv')
     df = df.dropna(subset=['review_stemmed', 'sentiment'])
     df['date'] = pd.to_datetime(df['date'])
     return df
